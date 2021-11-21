@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="10dp"
+    android:background="@drawable/app_back"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="5dp"
+        android:textColor="@color/black"
+        android:text="@string/title_string"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textAllCaps="true"
+        android:id="@+id/title_tv"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/title_tv"
+        android:id="@+id/upper_btns_layout"
+        android:baselineAligned="false">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:id="@+id/electrician_layout">
+
+            <ImageButton
+                android:layout_width="150dp"
+                android:layout_height="200dp"
+                android:src="@drawable/electrician"
+                android:scaleType="fitCenter"
+                android:background="@null"
+                android:id="@+id/electrician_ib"
+                android:layout_margin="15dp"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/electrician_tv"
+                android:textColor="@color/black"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/service_name_btn"
+                android:textSize="20sp"
+                android:textAllCaps="false"
+                android:id="@+id/electrician_acb"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:id="@+id/plumber_layout">
+
+            <ImageButton
+                android:layout_width="150dp"
+                android:layout_height="200dp"
+                android:src="@drawable/plumber"
+                android:scaleType="fitCenter"
+                android:background="@null"
+                android:id="@+id/plumber_ib"
+                android:layout_margin="15dp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/plumber_tv"
+                android:textColor="@color/black"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/service_name_btn"
+                android:textSize="20sp"
+                android:textAllCaps="false"
+                android:id="@+id/plumber_acb"/>
+
+        </LinearLayout>
+    </LinearLayout>
+    <!-- =================================================== -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/upper_btns_layout"
+        android:baselineAligned="false">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:id="@+id/exterminator_layout">
+
+            <ImageButton
+                android:layout_width="150dp"
+                android:layout_height="200dp"
+                android:src="@drawable/exterminator"
+                android:scaleType="fitCenter"
+                android:background="@null"
+                android:id="@+id/exterminator_ib"
+                android:layout_margin="15dp"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/exterminator_tv"
+                android:textColor="@color/black"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/service_name_btn"
+                android:textSize="20sp"
+                android:textAllCaps="false"
+                android:id="@+id/exterminator_acb"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:id="@+id/mechanic_layout">
+
+            <ImageButton
+                android:layout_width="150dp"
+                android:layout_height="200dp"
+                android:src="@drawable/mechanic"
+                android:scaleType="fitCenter"
+                android:background="@null"
+                android:id="@+id/mechanic_ib"
+                android:layout_margin="15dp"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/mechanic_tv"
+                android:textColor="@color/black"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/service_name_btn"
+                android:textSize="20sp"
+                android:textAllCaps="false"
+                android:id="@+id/mechanic_acb"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

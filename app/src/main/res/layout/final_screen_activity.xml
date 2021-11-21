@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_back">
+
+    <TextView
+        android:id="@+id/head_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center"
+        android:lines="1"
+        android:text="@string/final_screen"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline1"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="30sp">
+    </TextView>
+
+    <TextView
+        android:id="@+id/name_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/head_title"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        android:textSize="22sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="15dp"
+        android:text="@string/summery_name"/>
+
+    <TextView
+        android:id="@+id/phone_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/name_header"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        android:textSize="22sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="15dp"
+        android:text="@string/summery_phone"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/final_screen"
+        android:layout_marginTop="65dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:id="@+id/final_img"
+        android:layout_below="@+id/phone_header"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/final_img"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:text="@string/main_screen_btn"
+        android:textColor="@color/black"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:background="@drawable/service_name_btn"
+        android:textSize="20sp"
+        android:id="@+id/back_home_btn"
+        android:textAllCaps="true"/>
+
+</RelativeLayout>

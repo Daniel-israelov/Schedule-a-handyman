@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MidSemesterProject</string>
+    <string name="title_string">אנא בחר שירות</string>
+    <string name="electrician_tv">חשמלאי</string>
+    <string name="plumber_tv">אינסטלטור</string>
+    <string name="exterminator_tv">מדביר</string>
+    <string name="mechanic_tv">מכונאי</string>
+    <string name="selected_service_tv">בחרת להזמין -</string>
+    <string name="info_fill_tv">פרטי התקשרות:</string>
+    <string name="name_tv">שם מלא</string>
+    <string name="phone_tv">מספר טלפון</string>
+    <string name="day_selection">לחץ לבחירת יום</string>
+    <string name="sunday">ראשון</string>
+    <string name="monday">שני</string>
+    <string name="tuesday">שלישי</string>
+    <string name="wednesday">רביעי</string>
+    <string name="thursday">חמישי</string>
+    <string name="hrs_range_tv">בחר שעה:</string>
+    <string name="visit_tv">תאם מועד ביקור:</string>
+    <string name="notes_tv">בחר כמות הערות רצויה</string>
+    <string name="finish_btn">סיום</string>
+    <string name="cancel_btn">ביטול</string>
+    <string name="ok_btn">אישור</string>
+    <string name="day_helper">יום בשבוע העוקב</string>
+    <string name="final_screen">בקשתך התקבלה</string>
+    <string name="new_note_hint">כתוב הערה</string>
+    <string name="missing_fields_toast">אנא מלא את כל הפרטים</string>
+    <string name="main_screen_btn">חזרה למסך הראשי</string>
+    <string name="summery_name">שם:</string>
+    <string name="summery_phone">טלפון:</string>
+</resources>

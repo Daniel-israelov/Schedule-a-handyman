@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">MidSemesterProject</string>
+    <string name="title_string">Please select a service</string>
+    <string name="electrician_tv">Electrician</string>
+    <string name="plumber_tv">Plumber</string>
+    <string name="exterminator_tv">Exterminator</string>
+    <string name="mechanic_tv">Mechanic</string>
+    <string name="selected_service_tv">Service selected -</string>
+    <string name="info_fill_tv">Contact information:</string>
+    <string name="name_tv">Full name</string>
+    <string name="phone_tv">Phone number</string>
+    <string name="day_selection">Tap to select day</string>
+    <string name="sunday">Sunday</string>
+    <string name="monday">Monday</string>
+    <string name="tuesday">Tuesday</string>
+    <string name="wednesday">Wednesday</string>
+    <string name="thursday">Thursday</string>
+    <string name="hrs_range_tv">Select time:</string>
+    <string name="visit_tv">Schedule a visit:</string>
+    <string name="notes_tv">Enter number of notes</string>
+    <string name="finish_btn">Finish</string>
+    <string name="cancel_btn">Cancel</string>
+    <string name="ok_btn">OK</string>
+    <string name="day_helper">Day of the following week</string>
+    <string name="final_screen">Request submitted</string>
+    <string name="new_note_hint">Write a note</string>
+    <string name="missing_fields_toast">Some fields are missing</string>
+    <string name="main_screen_btn">Back to main screen</string>
+    <string name="summery_name">Name:</string>
+    <string name="summery_phone">Phone:</string>
+</resources>
