@@ -1,6 +1,7 @@
 package com.example.midsemesterproject;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
@@ -31,7 +32,7 @@ public class FillInfoActivity extends AppCompatActivity {
     ArrayList<String> weekDays;
     ArrayAdapter<String> daysAdapter;
 
-    @SuppressLint("ResourceType")
+    @SuppressLint({"ResourceType", "UseCompatLoadingForDrawables"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -79,26 +80,19 @@ public class FillInfoActivity extends AppCompatActivity {
 
                 for (int i = 0; i < notesCount; i++) {
                     TextInputEditText newET = new TextInputEditText(FillInfoActivity.this);
-
                     LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+
                     params.topMargin = 20;
                     params.bottomMargin = 20;
                     newET.setLayoutParams(params);
-                    String hint = getString(R.string.new_note_hint);
-                    newET.setHint(hint);
+                    newET.setHint(getString(R.string.new_note_hint));
 
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                         newET.setTextAppearance(R.style.TextAppearance_MaterialComponents_Headline1);
                     }
-
                     newET.setAllCaps(false);
-                    newET.setTextSize(15);
-                    newET.setTextColor(R.color.custom_grey);
-                    newET.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_FLAG_NO_SUGGESTIONS);
-                    newET.setBackgroundColor(Color.parseColor("#8F8F93"));
-                    newET.setGravity(Gravity.CENTER);
+                    newET.setBackground(getDrawable(R.drawable.rounded_et_corners));
                     newET.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
-                    newET.setLayoutParams(params);
                     extraNotes.addView(newET);
                 }
             }

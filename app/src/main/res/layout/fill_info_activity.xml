@@ -183,6 +183,7 @@
                 android:textSize="20sp"
                 android:id="@+id/ok_btn"
                 android:textAllCaps="true"/>
+
         </LinearLayout>
 
         <LinearLayout

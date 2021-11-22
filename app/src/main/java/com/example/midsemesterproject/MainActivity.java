@@ -16,9 +16,8 @@ public class MainActivity extends AppCompatActivity {
 
     /*
     * ToDo:
-    *  1. Set screen rotation to portrait for all activities.
-    *  2. Fix 'OnBackPressed' options. (app is closed when pressing the back button).
-    *  3. Try to add reasonable 'checkBox'.
+    *  CHeckBox
+    * 
     * */
 
 
