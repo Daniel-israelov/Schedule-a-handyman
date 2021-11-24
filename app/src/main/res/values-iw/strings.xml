@@ -25,8 +25,10 @@
     <string name="day_helper">יום בשבוע העוקב</string>
     <string name="final_screen">בקשתך התקבלה</string>
     <string name="new_note_hint">כתוב הערה</string>
-    <string name="missing_fields_toast">אנא מלא את כל הפרטים</string>
+    <string name="missing_hrs_toast">אנא בחר שעה</string>
     <string name="main_screen_btn">חזרה למסך הראשי</string>
     <string name="summery_name">שם:</string>
     <string name="summery_phone">טלפון:</string>
+    <string name="name_error">שם לא תקין</string>
+    <string name="required">נדרש*</string>
 </resources>

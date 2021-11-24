@@ -1,13 +1,9 @@
 package com.example.midsemesterproject;
 
 import android.annotation.SuppressLint;
-import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
-import android.text.InputType;
-import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
@@ -15,6 +11,7 @@ import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.LinearLayout;
 import android.widget.RadioGroup;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
@@ -58,6 +55,9 @@ public class FillInfoActivity extends AppCompatActivity {
         daysAdapter = new ArrayAdapter<>(getApplicationContext(),R.layout.drop_down_item, weekDays);
         days_list.setAdapter(daysAdapter);
 
+        TextInputLayout phoneLayout = findViewById(R.id.mobile_field);
+        TextInputLayout nameLayout = findViewById(R.id.name_field);
+        ScrollView scrollView = findViewById(R.id.scroll_view);
         AppCompatButton okBtn = findViewById(R.id.ok_btn);
         AppCompatButton finishBtn = findViewById(R.id.finish_btn);
         AppCompatButton cancelBtn = findViewById(R.id.cancel_btn);
@@ -80,7 +80,7 @@ public class FillInfoActivity extends AppCompatActivity {
 
                 for (int i = 0; i < notesCount; i++) {
                     TextInputEditText newET = new TextInputEditText(FillInfoActivity.this);
-                    LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+                    LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
 
                     params.topMargin = 20;
                     params.bottomMargin = 20;
@@ -91,6 +91,7 @@ public class FillInfoActivity extends AppCompatActivity {
                         newET.setTextAppearance(R.style.TextAppearance_MaterialComponents_Headline1);
                     }
                     newET.setAllCaps(false);
+                    newET.setTextSize(15);
                     newET.setBackground(getDrawable(R.drawable.rounded_et_corners));
                     newET.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
                     extraNotes.addView(newET);
@@ -109,11 +110,49 @@ public class FillInfoActivity extends AppCompatActivity {
             String phoneNum = Objects.requireNonNull(phoneET.getText()).toString();
             String daySelected = days_list.getText().toString();
             int radioChecked = hrsGroup.getCheckedRadioButtonId();
+            boolean legalName, legalPhone, legalDay, legalHrs;
 
-            if(name.equals("") || phoneNum.equals("") || daySelected.equals("") || radioChecked == -1){
-                Toast.makeText(FillInfoActivity.this, getString(R.string.missing_fields_toast), Toast.LENGTH_SHORT).show();
+            if(!name.matches("[a-zA-Zא-ת ]+")) { //Validating name
+                if (name.equals(""))
+                    nameLayout.setError(getString(R.string.required));
+                else
+                    nameLayout.setError(getString(R.string.name_error));
+
+                scrollView.fullScroll(ScrollView.FOCUS_UP);
+                legalName = false;
             }
-            else{
+            else {
+                legalName = true;
+                nameLayout.setErrorEnabled(false);
+            }
+
+            if(phoneNum.equals("")) { //Validating phone entered
+                phoneLayout.setError(getString(R.string.required));
+                scrollView.fullScroll(ScrollView.FOCUS_UP);
+                legalPhone = false;
+            }
+            else {
+                legalPhone = true;
+                phoneLayout.setErrorEnabled(false);
+            }
+
+            if(daySelected.equals("")) { //Validating day selection
+                days_layout.setError(getString(R.string.required));
+                scrollView.fullScroll(ScrollView.FOCUS_UP);
+                legalDay = false;
+            }
+            else {
+                legalDay = true;
+                days_layout.setErrorEnabled(false);
+            }
+
+            if(radioChecked == -1){ //Validating time selection
+                legalHrs = false;
+                Toast.makeText(FillInfoActivity.this, getString(R.string.missing_hrs_toast), Toast.LENGTH_SHORT).show();
+            }
+            else legalHrs = true;
+
+            if(legalName && legalPhone && legalDay && legalHrs){
                 Intent intent = new Intent(FillInfoActivity.this, FinalScreenActivity.class);
                 intent.putExtra("contactName", name);
                 intent.putExtra("contactPhone", phoneNum);

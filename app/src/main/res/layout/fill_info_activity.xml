@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/app_back"
+    android:id="@+id/scroll_view"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
@@ -51,7 +52,7 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
                 android:id="@+id/name_et"
-                android:inputType="text" />
+                android:inputType="textPersonName" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -123,8 +124,6 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:id="@+id/hrs_rg">
-
-
 
             <RadioButton
                 android:layout_width="0dp"

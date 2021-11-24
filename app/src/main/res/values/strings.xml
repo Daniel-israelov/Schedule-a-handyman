@@ -24,8 +24,10 @@
     <string name="day_helper">Day of the following week</string>
     <string name="final_screen">Request submitted</string>
     <string name="new_note_hint">Write a note</string>
-    <string name="missing_fields_toast">Some fields are missing</string>
+    <string name="missing_hrs_toast">Please select time</string>
     <string name="main_screen_btn">Back to main screen</string>
     <string name="summery_name">Name:</string>
     <string name="summery_phone">Phone:</string>
+    <string name="name_error">Invalid name</string>
+    <string name="required">Required*</string>
 </resources>
