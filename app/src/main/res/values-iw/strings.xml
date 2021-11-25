@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">MidSemesterProject</string>
+    <string name="app_name">הזמנת איש מקצוע</string>
     <string name="title_string">אנא בחר שירות</string>
     <string name="electrician_tv">חשמלאי</string>
     <string name="plumber_tv">אינסטלטור</string>
