@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Schdule a handyman</string>
+    <string name="app_name">Schedule a handyman</string>
     <string name="title_string">Please select a service</string>
     <string name="electrician_tv">Electrician</string>
     <string name="plumber_tv">Plumber</string>
@@ -31,4 +31,6 @@
     <string name="name_error">Invalid name</string>
     <string name="required">Required*</string>
     <string name="rating">Rate us</string>
+    <string name="friday">Friday</string>
+    <string name="saturday">Saturday</string>
 </resources>

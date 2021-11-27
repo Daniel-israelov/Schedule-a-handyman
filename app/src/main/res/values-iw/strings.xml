@@ -32,4 +32,6 @@
     <string name="name_error">שם לא תקין</string>
     <string name="required">נדרש*</string>
     <string name="rating">דרג אותנו</string>
+    <string name="friday">שישי</string>
+    <string name="saturday">שבת</string>
 </resources>

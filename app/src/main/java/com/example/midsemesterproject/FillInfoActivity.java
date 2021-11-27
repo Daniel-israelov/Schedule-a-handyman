@@ -51,6 +51,8 @@ public class FillInfoActivity extends AppCompatActivity {
         weekDays.add(getString(R.string.tuesday));
         weekDays.add(getString(R.string.wednesday));
         weekDays.add(getString(R.string.thursday));
+        weekDays.add(getString(R.string.friday));
+        weekDays.add(getString(R.string.saturday));
 
         daysAdapter = new ArrayAdapter<>(getApplicationContext(),R.layout.drop_down_item, weekDays);
         days_list.setAdapter(daysAdapter);
