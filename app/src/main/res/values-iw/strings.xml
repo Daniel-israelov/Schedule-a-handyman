@@ -31,4 +31,5 @@
     <string name="summery_phone">טלפון:</string>
     <string name="name_error">שם לא תקין</string>
     <string name="required">נדרש*</string>
+    <string name="rating">דרג אותנו</string>
 </resources>

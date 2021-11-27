@@ -4,11 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 
 import android.annotation.SuppressLint;
+import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.widget.ImageButton;
+import android.widget.RatingBar;
 
 import java.util.Objects;
 
@@ -25,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         final AppCompatButton plumber_btn = findViewById(R.id.plumber_acb);
         final AppCompatButton exterminator_btn = findViewById(R.id.exterminator_acb);
         final AppCompatButton mechanic_btn = findViewById(R.id.mechanic_acb);
+        final AppCompatButton rating_btn = findViewById(R.id.rating_btn);
 
         final ImageButton electrician_ib = findViewById(R.id.electrician_ib);
         final ImageButton plumber_ib = findViewById(R.id.plumber_ib);
@@ -41,6 +45,12 @@ public class MainActivity extends AppCompatActivity {
         plumber_ib.setOnClickListener(acbListener);
         exterminator_ib.setOnClickListener(acbListener);
         mechanic_ib.setOnClickListener(acbListener);
+
+        rating_btn.setOnClickListener(view -> {
+            Intent intent = new Intent(MainActivity.this, RatingActivity.class);
+            startActivity(intent);
+            finish();
+        });
     }
 
     private class AcbListener implements View.OnClickListener{
