@@ -10,10 +10,12 @@ import android.view.Window;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.LinearLayout;
+import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 import com.google.android.material.textfield.TextInputEditText;
@@ -25,9 +27,10 @@ public class FillInfoActivity extends AppCompatActivity {
 
     TextInputLayout days_layout;
     AutoCompleteTextView days_list;
-
     ArrayList<String> weekDays;
     ArrayAdapter<String> daysAdapter;
+    RadioButton morningHrs;
+    RadioButton noonHrs;
 
     @SuppressLint({"ResourceType", "UseCompatLoadingForDrawables"})
     @Override
@@ -57,6 +60,12 @@ public class FillInfoActivity extends AppCompatActivity {
         daysAdapter = new ArrayAdapter<>(getApplicationContext(),R.layout.drop_down_item, weekDays);
         days_list.setAdapter(daysAdapter);
 
+        days_list.setOnItemClickListener((adapterView, view, i, l) -> {
+            String daySelection = adapterView.getItemAtPosition(i).toString();
+            String dayToast = daySelection + " " + getString(R.string.spinner_toast);
+            Toast.makeText(FillInfoActivity.this, dayToast, Toast.LENGTH_SHORT).show();
+        });
+
         TextInputLayout phoneLayout = findViewById(R.id.mobile_field);
         TextInputLayout nameLayout = findViewById(R.id.name_field);
         ScrollView scrollView = findViewById(R.id.scroll_view);
@@ -69,6 +78,12 @@ public class FillInfoActivity extends AppCompatActivity {
         TextInputEditText phoneET = findViewById(R.id.phone_et);
 
         RadioGroup hrsGroup = findViewById(R.id.hrs_rg);
+        morningHrs = findViewById(R.id.morning_radio);
+        noonHrs = findViewById(R.id.noon_radio);
+
+        MyRadioButtonListener myRadioButtonListener = new MyRadioButtonListener();
+        morningHrs.setOnClickListener(myRadioButtonListener);
+        noonHrs.setOnClickListener(myRadioButtonListener);
 
         /* Dynamically creating EditTexts */
         okBtn.setOnClickListener(view -> {
@@ -162,6 +177,21 @@ public class FillInfoActivity extends AppCompatActivity {
                 finish(); // prevents from coming back to this screen from final screen
             }
         });
+    }
+
+    private class MyRadioButtonListener implements View.OnClickListener{
+        @Override
+        public void onClick(View view) {
+            int id = view.getId();
+            String toastText;
+
+            if(id == R.id.morning_radio)
+                toastText = getString(R.string.morning_radio_selection);
+            else
+                toastText = getString(R.string.noon_radio_selected);
+
+            Toast.makeText(FillInfoActivity.this, toastText, Toast.LENGTH_SHORT).show();
+        }
     }
 
     @Override

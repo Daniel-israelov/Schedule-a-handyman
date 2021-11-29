@@ -6,10 +6,8 @@ import android.view.View;
 import android.view.Window;
 import android.widget.ImageView;
 import android.widget.RatingBar;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
-
 import java.util.Objects;
 
 public class RatingActivity extends AppCompatActivity {

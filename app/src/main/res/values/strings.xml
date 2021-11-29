@@ -33,4 +33,7 @@
     <string name="rating">Rate us</string>
     <string name="friday">Friday</string>
     <string name="saturday">Saturday</string>
+    <string name="morning_radio_selection">Morning hours selected</string>
+    <string name="noon_radio_selected">Noon hours selected</string>
+    <string name="spinner_toast">selected</string>
 </resources>

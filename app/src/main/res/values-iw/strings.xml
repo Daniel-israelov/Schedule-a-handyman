@@ -11,11 +11,11 @@
     <string name="name_tv">שם מלא</string>
     <string name="phone_tv">מספר טלפון</string>
     <string name="day_selection">לחץ לבחירת יום</string>
-    <string name="sunday">ראשון</string>
-    <string name="monday">שני</string>
-    <string name="tuesday">שלישי</string>
-    <string name="wednesday">רביעי</string>
-    <string name="thursday">חמישי</string>
+    <string name="sunday">יום ראשון</string>
+    <string name="monday">יום שני</string>
+    <string name="tuesday">יום שלישי</string>
+    <string name="wednesday">יום רביעי</string>
+    <string name="thursday">יום חמישי</string>
     <string name="hrs_range_tv">בחר שעה:</string>
     <string name="visit_tv">תאם מועד ביקור:</string>
     <string name="notes_tv">בחר כמות הערות רצויה</string>
@@ -32,6 +32,9 @@
     <string name="name_error">שם לא תקין</string>
     <string name="required">נדרש*</string>
     <string name="rating">דרג אותנו</string>
-    <string name="friday">שישי</string>
-    <string name="saturday">שבת</string>
+    <string name="friday">יום שישי</string>
+    <string name="saturday">יום שבת</string>
+    <string name="morning_radio_selection">בחרת בשעות הבוקר</string>
+    <string name="noon_radio_selected">בחרת בשעות הצהריים</string>
+    <string name="spinner_toast">נבחר</string>
 </resources>

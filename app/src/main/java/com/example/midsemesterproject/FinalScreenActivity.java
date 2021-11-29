@@ -6,7 +6,6 @@ import android.view.Window;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
-
 import java.util.Objects;
 
 public class FinalScreenActivity extends AppCompatActivity {
