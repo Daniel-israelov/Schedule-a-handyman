@@ -6,6 +6,8 @@ import android.view.View;
 import android.view.Window;
 import android.widget.ImageView;
 import android.widget.RatingBar;
+import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 import java.util.Objects;
@@ -40,6 +42,7 @@ public class RatingActivity extends AppCompatActivity {
                     ratingImg.setImageResource(R.drawable.sad_emoji);
                     ratingImg.setVisibility(View.VISIBLE);
                 }
+                Toast.makeText(RatingActivity.this, Float.toString(v), Toast.LENGTH_SHORT).show();
             }
         });
     }

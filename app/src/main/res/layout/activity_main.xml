@@ -42,7 +42,7 @@
                 android:scaleType="fitCenter"
                 android:background="@null"
                 android:id="@+id/electrician_ib"
-                android:layout_margin="15dp"/>
+                android:layout_margin="15dp" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:layout_width="match_parent"
