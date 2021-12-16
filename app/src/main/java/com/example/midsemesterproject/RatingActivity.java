@@ -28,7 +28,7 @@ public class RatingActivity extends AppCompatActivity {
             startActivity(intent);
             finish();
         });
-
+        System.out.println();///////////////////////////////////////////////////////////////
         RatingBar ratingBar = findViewById(R.id.rating_bar);
         ratingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
             final ImageView ratingImg = findViewById(R.id.rating_img);
